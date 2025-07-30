@@ -1,8 +1,8 @@
 using Asp.Versioning;
-using DustInTheWind.AspNetVersioningDemo.V2.Models;
+using DustInTheWind.AspNetVersioningDemo.Presentation.V2.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DustInTheWind.AspNetVersioningDemo.V2.Controllers;
+namespace DustInTheWind.AspNetVersioningDemo.Presentation.V2.Controllers;
 
 [ApiController]
 [ApiVersion("2.0")]
@@ -10,7 +10,7 @@ namespace DustInTheWind.AspNetVersioningDemo.V2.Controllers;
 public class InfoController : ControllerBase
 {
     [HttpGet("version")]
-    public ActionResult<string> GetVersion()
+    public ActionResult<VersionDto> GetVersion()
     {
         return Ok(new VersionDto
         {

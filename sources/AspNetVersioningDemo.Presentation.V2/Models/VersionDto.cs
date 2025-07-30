@@ -1,4 +1,4 @@
-﻿namespace DustInTheWind.AspNetVersioningDemo.V2.Models;
+namespace DustInTheWind.AspNetVersioningDemo.Presentation.V2.Models;
 
 public class VersionDto
 {
