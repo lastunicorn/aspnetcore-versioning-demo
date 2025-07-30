@@ -1,21 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyName>DustInTheWind.$(MSBuildProjectName)</AssemblyName>
-    <RootNamespace>DustInTheWind.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>DustInTheWind.$(MSBuildProjectName)</AssemblyName>
+        <RootNamespace>DustInTheWind.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AspNetVersioningDemo.Presentation.V1\AspNetVersioningDemo.Presentation.V1.csproj" />
-    <ProjectReference Include="..\AspNetVersioningDemo.Presentation.V2\AspNetVersioningDemo.Presentation.V2.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\AspNetVersioningDemo.Presentation.V1\AspNetVersioningDemo.Presentation.V1.csproj" />
+        <ProjectReference Include="..\AspNetVersioningDemo.Presentation.V2\AspNetVersioningDemo.Presentation.V2.csproj" />
+    </ItemGroup>
 
 </Project>

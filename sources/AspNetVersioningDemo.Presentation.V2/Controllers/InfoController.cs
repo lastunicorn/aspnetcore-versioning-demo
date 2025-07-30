@@ -1,6 +1,7 @@
 using Asp.Versioning;
 using DustInTheWind.AspNetVersioningDemo.Presentation.V2.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace DustInTheWind.AspNetVersioningDemo.Presentation.V2.Controllers;
 
@@ -9,7 +10,18 @@ namespace DustInTheWind.AspNetVersioningDemo.Presentation.V2.Controllers;
 [Route("v{version:apiVersion}/info")]
 public class InfoController : ControllerBase
 {
+    /// <summary>
+    /// Gets the API version information for version 2.0
+    /// </summary>
+    /// <remarks>
+    /// Returns detailed information about the current API version including version number,
+    /// release date, and description of features and improvements.
+    /// </remarks>
+    /// <returns>Version information including version number, date, and description</returns>
+    /// <response code="200">Successfully retrieved version information</response>
     [HttpGet("version")]
+    [ProducesResponseType(typeof(VersionDto), (int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
     public ActionResult<VersionDto> GetVersion()
     {
         return Ok(new VersionDto
