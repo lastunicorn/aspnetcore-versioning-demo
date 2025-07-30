@@ -3,7 +3,6 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <AssemblyName>DustInTheWind.$(MSBuildProjectName)</AssemblyName>
         <RootNamespace>DustInTheWind.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
