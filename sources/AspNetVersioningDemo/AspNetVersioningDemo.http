@@ -1,6 +1,6 @@
 @AspNetVersioningDemo_HostAddress = http://localhost:5262
 
-GET {{AspNetVersioningDemo_HostAddress}}/weatherforecast/
+GET {{AspNetVersioningDemo_HostAddress}}/info/
 Accept: application/json
 
 ###

@@ -1,15 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetVersioningDemo.Controllers
+namespace DustInTheWind.AspNetVersioningDemo.Controllers;
+
+[ApiController]
+[Route("info")]
+public class InfoController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class InfoController : ControllerBase
+    [HttpGet("version")]
+    public ActionResult<string> GetVersion()
     {
-        [HttpGet("version")]
-        public ActionResult<string> GetVersion()
-        {
-            return Ok("1.0.0");
-        }
+        return Ok("1.0.0");
     }
 }
