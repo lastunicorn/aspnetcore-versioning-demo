@@ -5,6 +5,13 @@ using System.Net;
 
 namespace DustInTheWind.AspNetVersioningDemo.Presentation.V2.Controllers;
 
+/// <summary>
+/// Controller for providing API information and version details for version 2.0
+/// </summary>
+/// <remarks>
+/// This controller handles requests related to API information including version details,
+/// release information, and feature descriptions for the version 2.0 API.
+/// </remarks>
 [ApiController]
 [ApiVersion("2.0")]
 [Route("v{version:apiVersion}/info")]
