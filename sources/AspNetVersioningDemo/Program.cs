@@ -42,7 +42,8 @@ public class Program
             options.SwaggerDoc("v2", new OpenApiInfo
             {
                 Title = "Versioning Demo",
-                Version = "v2"
+                Version = "v2",
+                Description = "Advanced version of the API with enhanced features, improved performance, and additional endpoints. This version includes comprehensive version information, detailed error handling, and extended functionality for better integration capabilities."
             });
             
             // Include XML comments
