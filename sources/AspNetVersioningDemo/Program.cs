@@ -45,21 +45,14 @@ public class Program
                 Version = "v2",
                 Description = "Advanced version of the API with enhanced features, improved performance, and additional endpoints. This version includes comprehensive version information, detailed error handling, and extended functionality for better integration capabilities."
             });
-            
-            // Include XML comments
-            var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-            options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
-            
-            // Include XML comments from V1 and V2 presentation projects
-            var v1XmlFile = "DustInTheWind.AspNetVersioningDemo.Presentation.V1.xml";
-            var v1XmlPath = Path.Combine(AppContext.BaseDirectory, v1XmlFile);
-            if (File.Exists(v1XmlPath))
-                options.IncludeXmlComments(v1XmlPath);
-                
-            var v2XmlFile = "DustInTheWind.AspNetVersioningDemo.Presentation.V2.xml";
-            var v2XmlPath = Path.Combine(AppContext.BaseDirectory, v2XmlFile);
-            if (File.Exists(v2XmlPath))
-                options.IncludeXmlComments(v2XmlPath);
+
+            Assembly[] assemblies = new[]
+            {
+                typeof(Presentation.V1.Controllers.InfoController).Assembly,
+                typeof(Presentation.V2.Controllers.InfoController).Assembly
+            };
+
+            options.IncludeXmlCommentsFrom(assemblies);
         });
 
         var app = builder.Build();
