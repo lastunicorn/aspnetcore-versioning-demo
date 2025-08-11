@@ -1,3 +1,6 @@
+using Asp.Versioning;
+using Microsoft.OpenApi.Models;
+
 namespace DustInTheWind.AspNetVersioningDemo;
 
 public static class Program
@@ -10,9 +13,35 @@ public static class Program
 
         builder.Services.AddControllers();
 
+        // Configure API versioning
+        builder.Services.AddApiVersioning(options =>
+        {
+            options.DefaultApiVersion = new ApiVersion(1, 0);
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.ApiVersionReader = new MediaTypeApiVersionReaderBuilder()
+                .Template("application/vnd.dustinthewind.v{version}+json")
+                .Build();
+        }).AddApiExplorer(setup =>
+        {
+            setup.GroupNameFormat = "'v'VVV";
+        });
+
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        builder.Services.AddSwaggerGen(options =>
+        {
+            options.SwaggerDoc("v1", new OpenApiInfo
+            {
+                Title = "Versioning Demo",
+                Version = "v1"
+            });
+            options.SwaggerDoc("v2", new OpenApiInfo
+            {
+                Title = "Versioning Demo",
+                Version = "v2",
+                Description = "Advanced version of the API with enhanced features, improved performance, and additional endpoints. This version includes comprehensive version information, detailed error handling, and extended functionality for better integration capabilities."
+            });
+        });
 
         var app = builder.Build();
 
@@ -20,7 +49,11 @@ public static class Program
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Versioning Demo v1");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "Versioning Demo v2");
+            });
         }
 
         app.UseHttpsRedirection();

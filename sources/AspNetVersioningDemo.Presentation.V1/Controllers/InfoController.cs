@@ -1,9 +1,11 @@
+using Asp.Versioning;
 using DustInTheWind.AspNetVersioningDemo.Presentation.V1.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DustInTheWind.AspNetVersioningDemo.Presentation.V1.Controllers;
 
 [ApiController]
+[ApiVersion("1.0")]
 [Route("info")]
 public class InfoController : ControllerBase
 {
