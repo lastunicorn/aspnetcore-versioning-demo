@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "fd05b2ce-ab3b-4f01-ad65-34f4da598237",
+		"name": "AspNetVersioning Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44682768"
+	},
+	"item": [
+		{
+			"name": "Get Info - No Version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/info/version",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"info",
+						"version"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info - Version in URL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/:version/info/version",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						":version",
+						"info",
+						"version"
+					],
+					"variable": [
+						{
+							"key": "version",
+							"value": "v2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info - Version in Query String",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/info/version?version=2",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"info",
+						"version"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info - Version in Custom Header",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Version",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/info/version",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"info",
+						"version"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info - Version in Media-Type",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.dustinthewind.v2+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/info/version",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"info",
+						"version"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base-url",
+			"value": "https://localhost:7155",
+			"type": "default"
+		}
+	]
+}
