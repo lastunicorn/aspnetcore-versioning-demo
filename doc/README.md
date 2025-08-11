@@ -54,13 +54,13 @@ Configure services:
      {
          Title = "Versioning Demo",
          Version = "v1",
-         Description = "Descripbe vresion 1"
+         Description = "Describe version 1"
      });
      options.SwaggerDoc("v2", new OpenApiInfo
      {
          Title = "Versioning Demo",
          Version = "v2",
-         Description = "Descripbe vresion 2"
+         Description = "Describe version 2"
      });
  });
 ```
