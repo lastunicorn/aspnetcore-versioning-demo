@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetVersioningDemo.Presentation.V1", "AspNetVersioningDemo.Presentation.V1\AspNetVersioningDemo.Presentation.V1.csproj", "{29BD0802-429B-499E-8E00-2F6FC28A78A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetVersioningDemo.Presentation.V2", "AspNetVersioningDemo.Presentation.V2\AspNetVersioningDemo.Presentation.V2.csproj", "{89B27E5E-7672-481B-8C29-97ACE3838E20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{29BD0802-429B-499E-8E00-2F6FC28A78A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29BD0802-429B-499E-8E00-2F6FC28A78A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29BD0802-429B-499E-8E00-2F6FC28A78A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B27E5E-7672-481B-8C29-97ACE3838E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B27E5E-7672-481B-8C29-97ACE3838E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B27E5E-7672-481B-8C29-97ACE3838E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B27E5E-7672-481B-8C29-97ACE3838E20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
