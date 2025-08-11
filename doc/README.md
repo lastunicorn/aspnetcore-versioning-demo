@@ -29,6 +29,8 @@ builder.Services.AddApiVersioning(options =>
 
 ## Step 3 - Set version in controller
 
+Add `ApiVersion` attribute on controllers.
+
 ```c#
 [ApiController]
 [ApiVersion("1.0")]

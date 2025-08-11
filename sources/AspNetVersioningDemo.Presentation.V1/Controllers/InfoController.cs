@@ -7,15 +7,16 @@ namespace DustInTheWind.AspNetVersioningDemo.Presentation.V1.Controllers;
 [ApiController]
 [ApiVersion("1.0")]
 [Route("v{version:apiVersion}/info")]
+[Route("info")]
 public class InfoController : ControllerBase
 {
     [HttpGet("version")]
-    public ActionResult<VersionDto> GetVersion()
+    public VersionDto GetVersion()
     {
-        return Ok(new VersionDto
+        return new VersionDto
         {
             Version = "1.0.0",
             Date = new DateTime(2024, 10, 23, 0, 0, 0, DateTimeKind.Utc)
-        });
+        };
     }
 }

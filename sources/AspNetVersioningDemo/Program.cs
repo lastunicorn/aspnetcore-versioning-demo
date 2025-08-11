@@ -22,7 +22,10 @@ public static class Program
             options.ApiVersionReader = ApiVersionReader.Combine(
                 new QueryStringApiVersionReader("version"),
                 new HeaderApiVersionReader("X-Version"),
-                new UrlSegmentApiVersionReader()
+                new UrlSegmentApiVersionReader(),
+                new MediaTypeApiVersionReaderBuilder()
+                    .Template("application/vnd.dustinthewind.v{version}+json")
+                    .Build()
             );
         }).AddApiExplorer(setup =>
         {
