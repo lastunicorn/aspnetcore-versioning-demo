@@ -19,7 +19,7 @@ public static class Program
             options.DefaultApiVersion = new ApiVersion(1, 0);
             options.AssumeDefaultVersionWhenUnspecified = true;
             options.ApiVersionReader = new MediaTypeApiVersionReaderBuilder()
-                .Template("application/vnd.dustinthewind.v{version}+json")
+                .Template("application/vnd.dust-in-the-wind.v{version}+json")
                 .Build();
         }).AddApiExplorer(setup =>
         {
