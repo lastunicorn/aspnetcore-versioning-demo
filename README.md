@@ -1,4 +1,4 @@
-# ASP.NET Versioning Demo
+# ASP.NET Core Versioning
 
 ## Versioning Strategies
 
