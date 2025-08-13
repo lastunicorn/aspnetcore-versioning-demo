@@ -25,4 +25,4 @@ See different branches for each of the strategies.
 
 Please see also the tutorial document on each branch:
 
-- [tutorial](/doc/README.md)
+- [Tutorial](/doc/tutorial/README.md)
