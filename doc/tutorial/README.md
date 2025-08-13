@@ -1,3 +1,3 @@
-# ASP.NET Versioning Demo - Tutorial
+# ASP.NET Core Versioning - Tutorial
 
 Checkout each branch to see the related tutorial.

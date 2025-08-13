@@ -1,6 +1,4 @@
-# ASP.NET Versioning Demo
-
-## Versioning Strategies
+# ASP.NET Core Versioning
 
 Versioning a Web API can be done in multiple ways:
 
