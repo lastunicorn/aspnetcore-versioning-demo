@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace DustInTheWind.AspNetVersioningDemo.Presentation.V2.Models;
+namespace DustInTheWind.AspNetCoreVersioningDemo.Presentation.V2.Models;
 
 public class VersionDto
 {

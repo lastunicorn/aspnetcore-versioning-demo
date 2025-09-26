@@ -1,5 +1,4 @@
 using Asp.Versioning;
-using DustInTheWind.AspNetVersioningDemo.Presentation.V1.Models;
 using DustInTheWind.AspNetCoreVersioningDemo.Presentation.V1.Models;
 using Microsoft.AspNetCore.Mvc;
 
