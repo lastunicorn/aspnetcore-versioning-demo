@@ -32,6 +32,7 @@ public static class Program
             app.UseSwaggerUI(options =>
             {
                 options.DocumentTitle = "ASP.NET Core Versioning Demo";
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Versioning Demo v1");
             });
         }
 
