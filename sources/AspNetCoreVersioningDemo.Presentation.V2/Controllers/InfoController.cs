@@ -1,9 +1,9 @@
 using Asp.Versioning;
-using DustInTheWind.AspNetVersioningDemo.Presentation.V2.Models;
+using DustInTheWind.AspNetCoreVersioningDemo.Presentation.V2.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace DustInTheWind.AspNetVersioningDemo.Presentation.V2.Controllers;
+namespace DustInTheWind.AspNetCoreVersioningDemo.Presentation.V2.Controllers;
 
 [ApiController]
 [ApiVersion("2.0")]

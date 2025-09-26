@@ -1,8 +1,8 @@
 using Asp.Versioning;
-using DustInTheWind.AspNetVersioningDemo.Presentation.V1.Models;
+using DustInTheWind.AspNetCoreVersioningDemo.Presentation.V1.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DustInTheWind.AspNetVersioningDemo.Presentation.V1.Controllers;
+namespace DustInTheWind.AspNetCoreVersioningDemo.Presentation.V1.Controllers;
 
 [ApiController]
 [ApiVersion("1.0")]

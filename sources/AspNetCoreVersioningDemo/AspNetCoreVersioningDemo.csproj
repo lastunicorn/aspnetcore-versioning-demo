@@ -13,8 +13,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\AspNetVersioningDemo.Presentation.V1\AspNetVersioningDemo.Presentation.V1.csproj" />
-        <ProjectReference Include="..\AspNetVersioningDemo.Presentation.V2\AspNetVersioningDemo.Presentation.V2.csproj" />
+        <ProjectReference Include="..\AspNetCoreVersioningDemo.Presentation.V1\AspNetCoreVersioningDemo.Presentation.V1.csproj" />
+        <ProjectReference Include="..\AspNetCoreVersioningDemo.Presentation.V2\AspNetCoreVersioningDemo.Presentation.V2.csproj" />
     </ItemGroup>
 
 </Project>
