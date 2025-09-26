@@ -1,4 +1,6 @@
-namespace DustInTheWind.AspNetVersioningDemo;
+using Microsoft.OpenApi.Models;
+
+namespace DustInTheWind.AspNetCoreVersioningDemo;
 
 public static class Program
 {
@@ -12,7 +14,14 @@ public static class Program
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        builder.Services.AddSwaggerGen(options =>
+        {
+            options.SwaggerDoc("v1", new OpenApiInfo
+            {
+                Title = "Versioning Demo",
+                Version = "v1"
+            });
+        });
 
         var app = builder.Build();
 
@@ -20,7 +29,10 @@ public static class Program
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseSwaggerUI(options =>
+            {
+                options.DocumentTitle = "ASP.NET Core Versioning Demo";
+            });
         }
 
         app.UseHttpsRedirection();
