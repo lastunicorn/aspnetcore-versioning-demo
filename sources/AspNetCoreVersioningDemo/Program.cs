@@ -1,7 +1,7 @@
 using Asp.Versioning;
 using Microsoft.OpenApi.Models;
 
-namespace DustInTheWind.AspNetVersioningDemo;
+namespace DustInTheWind.AspNetCoreVersioningDemo;
 
 public static class Program
 {
@@ -49,10 +49,11 @@ public static class Program
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
-            app.UseSwaggerUI(c =>
+            app.UseSwaggerUI(options =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Versioning Demo v1");
-                c.SwaggerEndpoint("/swagger/v2/swagger.json", "Versioning Demo v2");
+                options.DocumentTitle = "ASP.NET Core Versioning Demo";
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Versioning Demo v1");
+                options.SwaggerEndpoint("/swagger/v2/swagger.json", "Versioning Demo v2");
             });
         }
 
